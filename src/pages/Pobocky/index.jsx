@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 
 export const CenterPage = ()=> {
 
-    const [center, setCenter] = useState([]);
+    const [centers, setCenter] = useState([]);
    
     useEffect(()=>{
     const loadData= async()=>{
@@ -18,10 +18,10 @@ export const CenterPage = ()=> {
 
     return(
         <div>
-            {center.map((pobocka)=>(
+            {centers.map((center)=>(
                 <div>
-                    <nav><Link key={pobocka.id} to={`pobocky/${pobocka.id}`}> <h3>{pobocka.name}</h3></Link></nav>
-                    <p>{pobocka.address}</p>
+                    <nav><Link key={center.id} to={`/pobocky/${center.id}`} state={center}> <h3>{center.name}</h3></Link></nav>
+                    <p>{center.address}</p>
 
                 </div>
             ))}

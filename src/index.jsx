@@ -25,15 +25,15 @@ const router = createBrowserRouter([{
     {
       path:"/pobocky",
       element: <CenterPage/>
-    },
-    {
-      path:"/pobocky/:id",
-      element: <CenterDetail/>
     }
-
   ]
+  },
+  {
+    path:"/pobocky/:id",
+    element: <CenterDetail/>
   }
 ])
+
 
 
 
